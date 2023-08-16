@@ -1,0 +1,43 @@
+Here we are using batch language to build a digital clock at the command prompt.
+Here, you can change the color of the background and display.
+Colors are coded as two hexadecimal digits. Color 00 means black.
+
+00-black
+01-navy
+02-green
+03-teal
+04-maroon
+05purplr
+06-olive
+07-silver
+08-grey
+09-blue
+0A-lime
+0B-aqua
+0C-red
+0D- fuchisa
+0E-yellow
+0F-white
+You can try it simply by opening your command prompt and typing colorXX (XX will be the code you want)
+
+also 
+
+cls   - It is used to clear the screen
+echo. - Displays a blank line on the screen
+we can also resize the console window using @mode function
+here we can change cols=25 lines = 6 
+
+#source code
+@echo off
+Title Digital clock
+@mode con cols=30 lines=5
+color  6C
+:main
+cls
+echo.
+echo Time:%time%
+echo.
+echo Date: %date%
+echo.
+ping -n 2 0.0.0.0>nul
+goto main
